@@ -24,9 +24,15 @@
 
 #if HAS_PRUSA_MMU1
 
-#include "../MarlinCore.h"
-#include "../module/planner.h"
-#include "../module/stepper.h"
+#include "../../MarlinCore.h"
+#include "../../module/planner.h"
+#include "../../module/stepper.h"
+
+void mmu_init() {
+  SET_OUTPUT(E_MUX0_PIN);
+  SET_OUTPUT(E_MUX1_PIN);
+  SET_OUTPUT(E_MUX2_PIN);
+}
 
 void mmu_init() {
   SET_OUTPUT(E_MUX0_PIN);
